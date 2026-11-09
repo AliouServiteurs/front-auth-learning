@@ -1,0 +1,233 @@
+/* ==============================
+   RÉGLAGES GÉNÉRAUX
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f5;
+}
+
+/* ==============================
+   BARRE DE NAVIGATION
+================================ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    background-color: #f8fafc;
+    padding: 0 25px;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #172554;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Bouton du menu mobile */
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.menu-button:focus-visible {
+    outline: 3px solid #93b4ff;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ==============================
+   PAGE DE CONNEXION
+================================ */
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: min(100%, 420px);
+    background-color: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #172554;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.intro {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* ==============================
+   FORMULAIRE
+================================ */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #334155;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ==============================
+   BOUTON DE CONNEXION
+================================ */
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* ==============================
+   TEXTE D'AIDE
+================================ */
+
+.help-text {
+    margin-top: 24px;
+    color: #64748b;
+    font-size: 14px;
+    text-align: center;
+}
+
+.help-text a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVE : MENU MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        background-color: #f8fafc;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+
+        transition: max-height 0.3s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease;
+    }
+
+    .nav-links.active {
+        border-top: 1px solid #e2e8f0;
+        max-height: 200px;
+        opacity: 1;
+        padding: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

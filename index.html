@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion-Mon Espace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Menue de navigation -->
+    <nav class="navbar">
+        <div class="logo">Mon espace</div>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-label="Ouvrir le menu"
+            aria-controls="nav-menu">
+            ☰
+        </button>
+
+        <div class="nav-links" id="nav-menu">
+            <a href="#">Accueil</a>
+            <a href="#">Connexion</a>
+            <a href="#">Inscription</a>
+        </div>
+    </nav>
+    <!-- contenue principale -->
+    <main class="page">
+        <section class="login-card">
+            <p class="eyebrow"> Mon Espace</p>
+            <h1>Bienvenue </h1>
+            <p class="intro">Connectez-vous pour accèder a votre compte.</p>
+
+            <form action="" class="login-form">
+                <div class="form-field">
+                    <label for="email">Adresse E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@email.com" autocomplete="email"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="votre mot de passe"
+                        autocomplete="current-password" required>
+                </div>
+                <button type="button" class="submit-button">Se connecter</button>
+            </form>
+            <p class="help-text">Vous n'avez pas encore de compte ? <a href="">créer un compte</a></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
